@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>白色の底</title>
+    <link rel="icon" href="data:,">
+    
+    <script type="module" src="https://pyscript.net/releases/2025.11.1/core.js"></script>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.11.1/core.css">
+    <style>
+        body {
+            background-color: #222;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="canvas"></canvas>
+
+    <script type="py-game" config='{
+        "packages": [
+            "pygame-ce"
+        ],
+        "files": {
+            "./main.py": "./main.py"
+        }
+    }'>
+        import asyncio
+        import main
+
+        # ゲームの main() を実行
+        asyncio.ensure_future(main.main())
+    </script>
+
+</body>
+</html>
